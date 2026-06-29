@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page">
+  <h1>About OptiCrop</h1>
+  <p>
+    OptiCrop is an end-to-end AI and Machine Learning project for agricultural
+    production optimization. The system analyzes soil nutrients and environmental
+    parameters, trains crop recommendation models, saves the best model, and
+    exposes prediction through a Flask website.
+  </p>
+
+  <div class="split">
+    <div>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Recommend the most suitable crop from seven input values.</li>
+        <li>Improve productivity and farming decision quality.</li>
+        <li>Support sustainable use of fertilizer and water resources.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Technologies</h2>
+      <ul>
+        <li>Python, Flask, NumPy, Pandas, Scikit-learn</li>
+        <li>HTML5, CSS3, Bootstrap-style responsive UI</li>
+        <li>Pickle model loading with model.pkl support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
