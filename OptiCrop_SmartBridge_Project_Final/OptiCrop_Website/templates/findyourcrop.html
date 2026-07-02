@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page">
+  <h1>Find Your Crop</h1>
+  <p>Enter soil nutrient and environmental values to get a crop recommendation.</p>
+
+  {% if error %}
+    <div class="error">{{ error }}</div>
+  {% endif %}
+
+  <form class="crop-form" action="{{ url_for('predict') }}" method="post">
+    <label>Nitrogen (N)
+      <input name="N" type="number" step="any" required placeholder="90">
+    </label>
+    <label>Phosphorous (P)
+      <input name="P" type="number" step="any" required placeholder="42">
+    </label>
+    <label>Potassium (K)
+      <input name="K" type="number" step="any" required placeholder="43">
+    </label>
+    <label>Temperature
+      <input name="temperature" type="number" step="any" required placeholder="20.8">
+    </label>
+    <label>Humidity
+      <input name="humidity" type="number" step="any" required placeholder="82">
+    </label>
+    <label>pH
+      <input name="ph" type="number" step="any" required placeholder="6.5">
+    </label>
+    <label>Rainfall
+      <input name="rainfall" type="number" step="any" required placeholder="202">
+    </label>
+    <button type="submit">Predict Crop</button>
+  </form>
+</section>
+{% endblock %}

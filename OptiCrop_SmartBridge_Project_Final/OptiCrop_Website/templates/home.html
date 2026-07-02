@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">AI + Machine Learning for Agriculture</p>
+    <h1>Smart crop recommendations from soil and climate values</h1>
+    <p>
+      OptiCrop helps farmers, researchers, agribusiness teams, and policy makers
+      choose suitable crops using nitrogen, phosphorous, potassium, temperature,
+      humidity, pH, and rainfall.
+    </p>
+    <a class="button" href="{{ url_for('findyourcrop') }}">Find Your Crop</a>
+  </div>
+</section>
+
+<section class="grid">
+  <article>
+    <h2>Data-driven</h2>
+    <p>Uses crop recommendation data to connect field conditions with crop labels.</p>
+  </article>
+  <article>
+    <h2>Practical</h2>
+    <p>Simple web form for quick field-condition entry and prediction.</p>
+  </article>
+  <article>
+    <h2>Sustainable</h2>
+    <p>Supports nutrient-aware, rainfall-aware, and resource-conscious planning.</p>
+  </article>
+</section>
+{% endblock %}

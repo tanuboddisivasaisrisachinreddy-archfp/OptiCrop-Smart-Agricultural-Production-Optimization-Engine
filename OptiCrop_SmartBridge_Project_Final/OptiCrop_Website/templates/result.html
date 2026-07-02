@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page result">
+  <p class="eyebrow">Prediction Result</p>
+  <h1>Recommended Crop: {{ crop|title }}</h1>
+  <p>
+    This recommendation was generated from the submitted nutrient and
+    environmental values.
+  </p>
+
+  <div class="summary">
+    {% for key, value in values.items() %}
+      <span><strong>{{ key }}</strong>{{ value }}</span>
+    {% endfor %}
+  </div>
+
+  <a class="button" href="{{ url_for('findyourcrop') }}">Try Another Prediction</a>
+</section>
+{% endblock %}
